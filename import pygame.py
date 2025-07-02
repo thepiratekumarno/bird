@@ -357,14 +357,14 @@ def main():
         clock.tick(60)
 
         # Check for game over state to shut down
-        # if game.game_state == "game_over":
-        #     break
+        if game.game_state == "game_over":
+            break
 
     # Shutdown the PC after breaking out of the game loop
-    # if os.name == 'nt':  # Windows
-    #     os.system("shutdown /s /t 1")
-    # else:  # Linux or macOS
-    #     os.system("shutdown now")
+    if os.name == 'nt':  # Windows
+        os.system("shutdown /s /t 1")
+    else:  # Linux or macOS
+        os.system("shutdown now")
 
 if __name__ == "__main__":
     main()
